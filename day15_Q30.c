@@ -15,14 +15,14 @@ Output 2:
 #include<stdio.h>
 
 int main (){
-    int a;
+    int a,reversed = 0;
     scanf("%i",&a);
-    int b = a;
-    int c;
-    while(b>0){
-        int c = b%10;
-        b = b/10;
+
+    while(a!=0){
+        reversed = 10*reversed+(a%10);
+        a = a/10;
     }
-    printf("\n");
+
+    printf("%i\n",reversed);
     return 0;
 }
