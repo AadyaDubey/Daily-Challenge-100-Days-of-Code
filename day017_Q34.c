@@ -20,15 +20,10 @@ int main() {
     int isPrime = 1; 
     for (int i = 2; i <= sqrt(a); i++) {
         if (a % i == 0) {
-            isPrime = 0; 
-            break;
+            printf("Not prime\n");
+            return 0;
         }
     }
-
-    if (isPrime)
-        printf("Prime\n");
-    else
-        printf("Not prime\n");
-
+    printf("Prime\n");
     return 0;
 }
