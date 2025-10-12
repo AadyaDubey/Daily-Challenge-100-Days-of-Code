@@ -16,8 +16,7 @@ int main() {
         printf("Prime\n");
         return 0;
     }
-
-    int isPrime = 1; 
+ 
     for (int i = 2; i <= sqrt(a); i++) {
         if (a % i == 0) {
             printf("Not prime\n");
