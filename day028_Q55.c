@@ -1,5 +1,4 @@
-/* Q55: Write a program to print all the prime numbers from 1 to n.
-*/
+// Q55: Write a program to print all the prime numbers from 1 to n.
 
 #include<stdio.h>
 
@@ -9,14 +8,14 @@ int main (){
 
     printf("2 ");
     for(int i = 3;i<=a;i++){
-        int prime = 1;
+        int isPrime = 1;
         for(int e = 2;e<i;e++){
             if(i%e==0){
-                prime = 0;
+                isPrime = 0;
                 break;
             }
         }
-        if(prime)
+        if(isPrime)
             printf("%d ",i);
     }
 
