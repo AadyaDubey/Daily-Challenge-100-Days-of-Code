@@ -14,3 +14,22 @@ Output 2:
 Even=4, Odd=0
 
 */
+
+#include<stdio.h>
+
+int main(){
+    int size;
+    scanf("%d",&size);
+    int array [size];
+    int e=0,o=0;
+    for(int i=0;i<size;i++){
+        scanf("%d",&array[i]);
+        if(array[i]%2==0){
+            e++;
+        }else{
+            o++;
+        }
+    }
+    printf("Even=%d, Odd=%d\n",e,o);
+    return 0;
+}

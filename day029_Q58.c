@@ -14,3 +14,26 @@ Output 2:
 Max=10, Min=10
 
 */
+
+#include<stdio.h>
+
+int main (){
+    int size;
+    scanf("%d",&size);
+    int array [size];
+    for(int i=0;i<size;i++){
+        scanf("%d",&array[i]);
+    }
+    
+    int max = array[0],min = array[0];
+    for(int i=1;i<size-1;i++){
+        if(array[i]>max)
+            max = array[i];
+    
+        if(array[i]<min)
+            min = array[i];
+        
+    }
+    printf("Max=%d, Min=%d\n",max,min);
+    return 0;
+}
