@@ -21,10 +21,10 @@ int main (){
     scanf("%d",&a);
 
     float sum = 0;
-    while(a!=0){
-        sum += (2.0*a)/(4*(a-1)+3);
-        a--;
+    for(int i=a;i!=0;i--){
+        sum += (2.0*i)/(4*(i-1)+3);
     }
+
     printf("%.2f\n",sum);
     return 0;
 }
