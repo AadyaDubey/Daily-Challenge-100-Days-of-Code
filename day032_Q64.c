@@ -27,9 +27,7 @@ int main(){
     int num = 0;
     int highest_freq = arr[0];
     for(int i=0;i<10;i++){
-        if(arr[i]>=highest_freq){
-            if(arr[i]==highest_freq)
-                continue;
+        if(arr[i]>highest_freq){
             highest_freq = arr[i];
             num = i;
         }
