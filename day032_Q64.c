@@ -17,7 +17,7 @@ Output 2:
 int main(){
     int a,digit;
     scanf("%d",&a);
-    int arr [10]={0};
+    int arr [10]={0}; //value at every index becomes 0.
     while(a!=0){
         digit = a%10;
         arr[digit]++;
