@@ -11,3 +11,27 @@ Output 1:
 3 4
 
 */
+
+#include<stdio.h>
+
+int main (){
+    int rows,columns;
+    char enter;
+    scanf("%d %d",&rows,&columns);
+    int arr[rows][columns];
+    for(int i=0;i<rows;i++){
+        for(int j=0;j<columns;j++){
+            scanf("%d",&arr[i][j]);
+        }
+        scanf("%c",&enter);
+    }
+
+    printf("\n");
+    for(int i=0;i<rows;i++){
+        for(int j=0;j<columns;j++){
+            printf("%d ",arr[i][j]);
+        }
+        printf("\n");
+    }
+    return 0;
+}
