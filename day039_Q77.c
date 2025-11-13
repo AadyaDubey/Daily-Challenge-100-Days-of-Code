@@ -19,3 +19,19 @@ Output 2:
 True
 
 */
+
+#include<stdio.h>
+
+int main (){
+    int rows,columns;
+    scanf("%d %d",&rows,&columns);
+    int arr[rows][columns];
+    for(int i=0;i<rows;i++){
+        for(int j=0;j<columns;j++){
+            scanf("%d",&arr[i][j]);
+        }
+    }
+
+    int bottom_left = arr[rows-1][columns-1];
+    printf((arr[0][0]==bottom_left)?"True\n":"False\n");
+}
