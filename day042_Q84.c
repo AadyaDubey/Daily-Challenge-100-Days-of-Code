@@ -12,7 +12,7 @@ HELLO
 #include<stdio.h>
 
 int main (){
-    char a;
+    char a=0;
     while(a!='\n'){
         int a= getchar();
         if(a!='\n')printf("%c",a-32);

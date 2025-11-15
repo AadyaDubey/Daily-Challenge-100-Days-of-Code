@@ -13,7 +13,7 @@ i
 #include<stdio.h>
 
 int main (){
-    char a;
+    char a=0;
     while(a!='\n'){
         a = getchar();
         if(a!='\n')printf("%c\n",a);

@@ -13,7 +13,7 @@ Vowels=2, Consonants=3
 
 int main (){
     int v=0,c=0;
-    char a;
+    char a=0;
     while(1){
         a = getchar();
         if(a=='\n')break;

@@ -18,7 +18,7 @@ Output 2:
 
 int main (){
     int i = 0;
-    char a;
+    char a=0;
     while(a!='\n'){
         a = getchar();
         if(a!='\n'||i==0&&a=='\n')
