@@ -26,9 +26,6 @@ int main (){
         }
     }
 
-    for(int j=0;j<i;j++){
-        printf("%c",arr[j]);
-    }
-    printf("\n");
+    printf("%s\n",arr);
     return 0;
 }
