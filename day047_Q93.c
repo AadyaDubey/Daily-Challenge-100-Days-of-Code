@@ -17,16 +17,14 @@ Not anagrams
 */
 
 #include<stdio.h>
+#include<string.h>
 
 int main (){
-    char arr[100], a = getchar();
-    int i = 0;
-    while(a!='\n'){
-        arr[i]=a;
-        i++;
-        a = getchar();
-    }
+    char arr[100];
+    scanf("%s",arr);
+    int i = strlen(arr);
 
+    char trash = getchar();
     char b = getchar();
     while(b!='\n'){
         for(int j=0;j<i;j++){

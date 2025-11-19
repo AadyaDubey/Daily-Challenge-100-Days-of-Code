@@ -10,17 +10,12 @@ s
 */
 
 # include<stdio.h>
+# include<string.h>
 
 int main (){
-    int i=0;
-    char a,arr[100];
-    while(a!='\n'){
-        a = getchar();
-        if(a!='\n'){
-            arr[i]=a;
-            i++;
-        }
-    }
+    char arr[100];
+    scanf("%s",arr);
+    int i = strlen(arr);
 
     for(int j=0;j<i;j++){
         for(int k=j+1;k<i;k++){

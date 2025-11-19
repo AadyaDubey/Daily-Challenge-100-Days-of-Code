@@ -21,6 +21,7 @@ Output 1:
 int main (){
     int row1,row2,column1,column2;
     scanf("%d %d",&row1,&column1);
+    
     int arr1[row1][column1];
     for(int i=0;i<row1;i++){
         for(int j=0;j<column1;j++){

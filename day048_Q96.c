@@ -8,3 +8,9 @@ Output 1:
 I evol gnidoc
 
 */
+
+#include<stdio.h>
+
+int main(){
+    
+}

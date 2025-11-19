@@ -11,20 +11,13 @@ Output 1:
 */
 
 #include<stdio.h>
+#include<string.h>
 
 int main (){
-    int i=0;
-    char a=0;
-    char arr[100];
-    while(a!='\n'){
-        a = getchar();
-        if(a!='\n'){
-            arr[i]=a;
-            i++;
-        }
-    }
+    char arr[100], search;
+    scanf("%s %c",arr,&search);
+    int i = strlen(arr);
     
-    char search = getchar();
     int count = 0;
     for(int j=0;j<i;j++){
         if(arr[j]==search)

@@ -10,18 +10,12 @@ dcba
 */
 
 #include<stdio.h>
+#include<string.h>
 
 int main (){
     char array [100];
-    char a=0;
-    int i = 0;
-    while(a!='\n'){
-        a = getchar();
-        if(a!='\n'){
-            array [i] = a;
-            i++;
-        }
-    }
+    scanf("%s",array);
+    int i = strlen(array);
 
     //i-1 is used to not print the nul character present at the end of strings
     for(int j=i-1;j>=0;j--){ 

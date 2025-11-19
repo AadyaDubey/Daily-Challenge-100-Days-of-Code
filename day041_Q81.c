@@ -14,18 +14,17 @@ Output 2:
 
 */
 
-#include<stdio.h>  
+#include <stdio.h>
 
-int main (){
-    int i = 0;
-    char a=0;
-    while(a!='\n'){
-        a = getchar();
-        if(a!='\n'||i==0&&a=='\n')
-            i += 1;
-    }
+int main() {
+    char str[100]; 
+    int count = 0; 
+    scanf("%s",str);
 
-    printf("%d\n",i);
+    for(int i=0;str[i]!='\0';i++)
+        count++; 
+
+    printf("%d\n",count);
+
     return 0;
 }
-
