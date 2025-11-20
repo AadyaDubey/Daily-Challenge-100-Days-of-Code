@@ -13,20 +13,16 @@ a,ab,abc,b,bc,c
 #include <string.h>
 
 int main() {
-    char s[100];
-    scanf("%s", s);
-
-    int n = strlen(s);
-
-    for (int i = 0; i < n; i++) {
-        for (int j = i; j < n; j++) {
-            for (int k = i; k <= j; k++) {
-                printf("%c", s[k]);
+    char arr [100];
+    scanf("%s",arr);
+    int len = strlen(arr);
+    for(int i=0;i<len;i++){
+        for(int j=i;j<len;j++){
+            for(int k=i;k<=j;k++){
+                printf("%c",arr[k]);
             }
-            if (!(i == n-1 && j == n-1))
-                printf(",");
+            printf((i==len-1)?"\n":",");
         }
     }
-    printf("\n");
     return 0;
 }
