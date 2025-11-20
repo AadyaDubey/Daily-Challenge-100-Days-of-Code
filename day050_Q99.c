@@ -12,5 +12,8 @@ Output 1:
 #include<stdio.h>
 
 int main(){
-    
+    int day, year;
+    scanf("%d/04/%d",&day,&year);
+    printf("%d-Apr-%d\n",day,year);
+    return 0;
 }

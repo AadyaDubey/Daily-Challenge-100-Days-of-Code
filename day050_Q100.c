@@ -9,8 +9,25 @@ a,ab,abc,b,bc,c
 
 */
 
-#include<stdio.h>
+#include <stdio.h>
+#include <string.h>
 
-int main(){
-    
+int main() {
+    char s[100];
+    scanf("%s", s);
+
+    int n = strlen(s);
+
+    for (int i = 0; i < n; i++) {
+        for (int j = i; j < n; j++) {
+            // Print substring from i to j
+            for (int k = i; k <= j; k++) {
+                printf("%c", s[k]);
+            }
+            if (!(i == n-1 && j == n-1))
+                printf(",");
+        }
+    }
+    printf("\n");
+    return 0;
 }
