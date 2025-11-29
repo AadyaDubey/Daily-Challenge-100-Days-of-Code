@@ -9,3 +9,25 @@ Output 1:
 File updated successfully with appended text.
 
 */
+
+#include <stdio.h>
+
+int main() {
+    FILE *file;
+    char text[256];
+
+    file = fopen("data.txt", "a");
+
+    if (file == NULL) {
+        printf("Error: Unable to open file.\n");
+        return 1;
+    }
+
+    printf("Enter text to append: ");
+    fgets(text, sizeof(text), stdin);
+    fputs(text, file);
+    fclose(file);
+    printf("File updated successfully with appended text.\n");
+
+    return 0;
+}

@@ -8,3 +8,41 @@ Output 1:
 File copied successfully to destination.txt
 
 */
+
+#include <stdio.h>
+
+int main() {
+    FILE *src, *dest;
+    char sourceFile[100], destFile[100];
+    int ch;
+
+    printf("Enter source filename: ");
+    scanf("%s", sourceFile);
+
+    printf("Enter destination filename: ");
+    scanf("%s", destFile);
+
+    src = fopen(sourceFile, "r");
+    if (src == NULL) {
+        printf("Error: Could not open source file.\n");
+        return 1;
+    }
+
+    dest = fopen(destFile, "w");
+    if (dest == NULL) {
+        fclose(src);
+        printf("Error: Could not create/open destination file.\n");
+        return 1;
+    }
+
+    while ((ch = fgetc(src)) != EOF) {
+        fputc(ch, dest);
+    }
+
+    fclose(src);
+    fclose(dest);
+
+    printf("File copied successfully to %s\n", destFile);
+
+    return 0;
+}

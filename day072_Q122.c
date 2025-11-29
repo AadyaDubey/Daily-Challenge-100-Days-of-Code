@@ -13,16 +13,21 @@ Age: 23
 #include <stdio.h>
 
 int main() {
-    FILE *fp;
-    char line[100];
+    FILE *file;
+    char buffer[256];
 
-    fp = fopen("info.txt", "r");
+    file = fopen("info.txt", "r");
 
-    while (fgets(line, sizeof(line), fp) != NULL) {
-        printf("%s", line);
+    if (file == NULL) {
+        printf("Error: Could not open the file.\n");
+        return 1;
     }
 
-    fclose(fp);
+    while (fgets(buffer, sizeof(buffer), file) != NULL) {
+        printf("%s", buffer);
+    }
+
+    fclose(file);
 
     return 0;
 }

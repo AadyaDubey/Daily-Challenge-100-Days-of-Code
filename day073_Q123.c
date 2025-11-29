@@ -10,3 +10,47 @@ Words: 5
 Lines: 2
 
 */
+
+#include <stdio.h>
+
+int main() {
+    FILE *file;
+    char ch;
+    int characters = 0, words = 0, lines = 0;
+    int inWord = 0;
+
+    file = fopen("sample.txt", "r");
+
+    if (file == NULL) {
+        printf("Error: Could not open the file.\n");
+        return 1;
+    }
+
+    while ((ch = fgetc(file)) != EOF) {
+        characters++;
+
+        if (ch == '\n')
+            lines++;
+
+        if (ch != ' ' && ch != '\t' && ch != '\n' &&
+            ch != '\r' && ch != '\v' && ch != '\f' && inWord == 0) {
+            inWord = 1;
+            words++;
+        }
+        else if (ch == ' ' || ch == '\t' || ch == '\n' ||
+                 ch == '\r' || ch == '\v' || ch == '\f') {
+            inWord = 0;
+        }
+    }
+
+    if (characters > 0 && ch != '\n')
+        lines++;
+
+    fclose(file);
+
+    printf("Characters: %d\n", characters);
+    printf("Words: %d\n", words);
+    printf("Lines: %d\n", lines);
+
+    return 0;
+}
